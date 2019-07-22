@@ -47,17 +47,13 @@ For this code challenege review we will be building out a Steam Game Library dom
 - New VideoGames should initialize with the following attributes:
 
   - `title`
-  - `star_rating`
-  - `game_type`
-  - `price`
-  - `release_date` (Defaulted to `Time.now`)
   - Something else to keep track of each instance of this class as it is created...
 
 - `VideoGames` have many `Purchases`
 
 - `VideoGames` have many `SteamUsers` through `Purchases`
 
-- `title`, `release-date`, & `game_type` should be read-only. The rest should be accessible.
+- `title` should be read only.
 
 ---
 
@@ -79,6 +75,7 @@ The SteamUser class should have the following methods:
 - `#purchases` returns a collection of a user's purchases
 - `#games` returns a collection of all the games in a a user's library
 - `.user_with_most_games` `puts` to the terminal `"The user with the most games in their library is _____ with ____ games!"`
+- `.average_user_age` `puts` to the terminal `"The average age of all current users is ___!"`
 
 ### _Video_Game.rb_
 
@@ -86,8 +83,8 @@ The VideoGame class should have the following methods:
 
 - `#purchases` returns a collection of all purchases of a game
 - `#owners` returns a collection of all the users who have purchased the game
+- `#find_by_name` takes an argument of a game name and returns the game object with that name. Returns nil if none exists.
 - `.most_purchased_game` returns the game that has been purchased the most times
-- `.average_game_price` returns the average price of all games
 
 ### _Purchase.rb_
 
@@ -95,11 +92,11 @@ The Purchase class should have the following methods:
 
 - `#report` puts to the console a detailed report of all attributes of a purchase displayed however you choose
 
+---
+
 (BONUS If we have time)
 
-- `.highest_rated_game` returns the game with the most amount of 5 star ratings. includes the number of times it has been rated 5 stars
-- `.most_popular_game_among_users_ages_9_to_18` returns the most purchased game only amongst
-- `most_common_game_type`
+- `.most_common_game_type` (Add a gametype to each video game)
 - `.oldest_user` returns the oldest user
 - `.average_user_age` returns the average of the ages of all users
 - `#new_purchase` Should only create a new video game if it doesn't already exist.
