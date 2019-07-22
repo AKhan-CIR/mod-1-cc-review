@@ -31,7 +31,6 @@ For this code challenege review we will be building out a Steam Game Library dom
 
 - New Purchases should initialize with the following attributes:
 
-  - `amount`
   - `game`
   - `steam_user`
   - `purchase_date` (Defaulted to `Time.now`)
@@ -76,7 +75,7 @@ _reminder - class methods are denoted by a "." at the beginning (e.g. ".fullest_
 
 The SteamUser class should have the following methods:
 
-- `#new_purchase` takes in 2 arguments (amount, video_game) and uses the purchase class to create a new purchase.
+- `#new_purchase` given an argument of a video game object, uses the purchase class to create a new purchase of that video game.
 - `#purchases` returns a collection of a user's purchases
 - `#games` returns a collection of all the games in a a user's library
 - `.user_with_most_games` `puts` to the terminal `"The user with the most games in their library is _____ with ____ games!"`
@@ -85,7 +84,7 @@ The SteamUser class should have the following methods:
 
 The VideoGame class should have the following methods:
 
-- `#purchases` returns a collection of all times a game has been purchased
+- `#purchases` returns a collection of all purchases of a game
 - `#owners` returns a collection of all the users who have purchased the game
 - `.most_purchased_game` returns the game that has been purchased the most times
 - `.average_game_price` returns the average price of all games
